@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/img/photos/it-avatar-96x96.jpg
+Disallow: /assets/pdf/CV_MarkusLachat.pdf
+

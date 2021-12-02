@@ -1,0 +1,28 @@
+?php
+
+ 	mb_internal_encoding('UTF-8');	
+	$name = trim($_POST['name']);
+	$email = trim($_POST['email']);
+	$message = trim($_POST['message']);
+	
+	echo ($message);	
+	$emailTo = 'info@markus-lachat.com'; //Put your own email address here
+	if (empty($subject)) {
+	    $subject = 'Contact request';
+	}
+	$body = "Name: $name \n\nEmail: $email \n\nMessage:\n$message";
+	$headers = array();
+	$headers[] = "MIME-Version: 1.0";
+    $headers[] = "Content-type: text/plain; charset=iso-8859-1";
+	$headers[]= 'From: '.$email."\r\n" .
+        'Reply-To: '.$email."\r\n";
+
+    if($name !== '' && $message !== '' ) {
+//	    mail($emailTo, $subject, $body, implode("\r\n",$headers));
+	    $emailSent = true;
+	    echo ('SEND');
+	}
+	 echo ('SEND');
+
+?>
+
